@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site en Maintenance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Georgian:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Styles globaux */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    /* Avant : height: 100vh; */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ececec 100%);
+    font-family: 'EB Garamond', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in-out;
+            margin: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        h1 {
+            color: black;
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #010101;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 1.5rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .contact-container {
+            max-width: 400px;
+            margin: 2rem auto 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-container h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: #f9f9f9;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+            color: #0066cc;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-card:hover .arrow {
+            transform: translateX(3px);
+        }
+
+        .logo {
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .logo {
+        max-width: 100%;
+    }
+
+    .contact-link {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .contact-container h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .arrow {
+        font-size: 1rem;
+    }
+
+    .logo {
+        max-width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logoJc.jpeg" alt="Logo Cabinet d’Avocats" class="logo" />
+        <h1>Site en Maintenance</h1>
+        <div class="spinner"></div>
+        <p>Nous effectuons actuellement une maintenance de notre site. Nous serons de retour très bientôt !</p>
+        <div class="contact-container">
+            <h2>Restons en contact</h2>
+            <div class="contact-card">
+                <a href="mailto:jcm@cabinet-merieux.com" class="contact-link">
+                    <span>Email</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="contact-card">
+                <a href="https://consultation.avocat.fr/avocat-la-rochette/jean-claude-merieux-39468.html" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span>Page Professionnelle</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+        <footer>&copy; 2024 - Tous droits réservés.</footer>
+    </div>
+</body>
+</html>
